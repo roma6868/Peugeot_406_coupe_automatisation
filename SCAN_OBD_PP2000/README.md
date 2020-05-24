@@ -9,6 +9,11 @@
   </p>
   
 <h2>Initialisation de la communication</h2>
+ <p>
+  <center><img src="RESOURCE/img/5_BAUD_INITIALIZATION.png"></center>
+  <center><img src="RESOURCE/img/Initialisation_communication.png"></center>
+</p>
+  
   
 <h2>Software</h2>
   
