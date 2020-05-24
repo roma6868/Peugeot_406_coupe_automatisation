@@ -8,11 +8,11 @@
     <br>
   </p>
   
-<h3>Initialisation de la communication</h3>
+<h2>Initialisation de la communication</h2>
   
-<h4>Software</h4>
+<h2>Software</h2>
   
-<h5>Documentation</h5>
+<h2>Documentation</h2>
   <p>Datasheet : 
     <a href= "RESOURCE/DataSheet/MC33290.pdf" rel="nofollow">MC33290</a>
   <br>
