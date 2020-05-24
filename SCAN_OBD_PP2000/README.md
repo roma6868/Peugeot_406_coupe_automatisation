@@ -9,7 +9,8 @@
   </p>
   
 <h2>Initialisation de la communication</h2>
- <p>Procedure d'initialisation selon la norme ISO 9141</p>
+ <p>Procedure d'initialisation selon la norme <a href= "RESOURCE/DataSheet/IRJET-V4I7181.pdf" rel="nofollow">ISO 9141</a></p>
+ 
   <p align="center">
   <img src="RESOURCE/img/5_BAUD_INITIALIZATION.png">
   </p>
