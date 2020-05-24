@@ -34,8 +34,11 @@
    <img src="RESOURCE/img/Menu_identification_PP2000.png" height=400 >
   </p>
   <br>
-  <p>Un essais avec ARDUINO UNO qui envoye une demande au BSI sur ca version et ca date de fabrication. </p>
-  
+  <p>Un essais avec ARDUINO UNO qui envoye une demande au BSI sur ca version et ca date de fabrication. 
+     ASK : 0x82 0xD0 0xF1 0x21 0x81 0xE5
+     ANSWER : 0x8A 0xF1 0xD0 0X61 0x81 0x06 0x9D 0xA2 0x06 0x04 0x99 0x00 0x00 0x15
+  </p>
+
   <p align="center">
     <img src="RESOURCE/img/Arduino_read_OBD_v1.01.png" height=300 >
   </p>
