@@ -31,7 +31,7 @@
    <img src="RESOURCE/img/Menu_identification_PP2000.png" height=400 >
   </p>
   <br>
-  <p>Un essais avec ARDUINO UNO qui envoye une demande d'information au BSI sur ca version et ca date de fabrication. </p>
+  <p>Un essais avec ARDUINO UNO qui envoye une demande au BSI sur ca version et ca date de fabrication. </p>
   
   <p align="center">
     <img src="RESOURCE/img/Arduino_read_OBD_v1.01.png" height=300 >
