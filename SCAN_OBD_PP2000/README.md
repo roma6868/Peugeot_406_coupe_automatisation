@@ -17,11 +17,13 @@
   
 <h2>Software</h2>
 <p align="center">
+  <p>Pour me connecter au BSI de la voiture via la prise OBD je utilise le boitier diagnostic de peugeot ( PP2000 ) et sont logiciel ( peugeot planet office ) il permet de lire tout les informations technique sur les equipements de la voiture.</p>
    <img src="RESOURCE/img/Menu_identification_PP2000.png" height=400 >
   <br>
+  <p>Un essais avec ARDUINO UNO qui envoye une demande d'information au BSI sur ca version et ca date de fabrication. </p>
     <img src="RESOURCE/img/Arduino_read_OBD_v1.01.png" height=300 >
 </p>
-  <a href= "Software/Arduino_read_OBD_v1.01/Arduino_read_OBD_v1.01.ino" rel="nofollow">Software Arduino_read_OBD_v1.01</a>
+  <a href= "Software/Arduino_read_OBD_v1.01/Arduino_read_OBD_v1.01.ino" rel="nofollow"> =>Software Arduino_read_OBD_v1.01<= </a>
   
 <h2>Documentation</h2>
   <p>Datasheet : 
