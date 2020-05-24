@@ -15,7 +15,7 @@
   <img src="RESOURCE/img/5_BAUD_INITIALIZATION.png">
   </p>
   
-  <p>Procedure d'initialisation via le outil diagnostic PP2000</p>
+  <p>Procedure d'initialisation du outil diagnostic PP2000</p>
   <p align="center">
   <img src="RESOURCE/img/Initialisation_communication.png">
   </p>
