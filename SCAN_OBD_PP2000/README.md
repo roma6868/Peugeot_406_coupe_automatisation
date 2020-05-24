@@ -11,12 +11,12 @@
 <h2>Initialisation de la communication</h2>
  <p>Procedure d'initialisation selon la norme ISO 9141</p>
   <p align="center">
-  <center><img src="RESOURCE/img/5_BAUD_INITIALIZATION.png"></center>
+  <img src="RESOURCE/img/5_BAUD_INITIALIZATION.png">
   </p>
   
   <p>Procedure d'initialisation via le outil diagnostic PP2000</p>
   <p align="center">
-  <center><img src="RESOURCE/img/Initialisation_communication.png"></center>
+  <img src="RESOURCE/img/Initialisation_communication.png">
   </p>
   
   
