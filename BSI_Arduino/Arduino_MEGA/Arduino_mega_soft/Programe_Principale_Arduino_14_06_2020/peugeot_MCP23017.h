@@ -334,37 +334,37 @@ inline void MCP_23017::activationSortieMCP(byte position,boolean state) {
 	{
 	case 0: // Claxon
 		mcpOUTPUTstate[11] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[11], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[11], state);
 		break;
 
 	case 1: // Clignotant gauche
 		mcpOUTPUTstate[0] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[0], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[0], state);
 		break;
 
 	case 2: // clignotant droit
 		mcpOUTPUTstate[1] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[2], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[2], state);
 		break;
 	case 3: // Feux de position
 		mcpOUTPUTstate[4] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[4], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[4], state);
 		break;
 	case 4: // Brouillard AV
 		mcpOUTPUTstate[5] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[5], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[5], state);
 		break;
 	case 5: // Brouillard AR
 		mcpOUTPUTstate[6] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[6], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[6], state);
 		break;
 	case 6: // Feux de croisement
 		mcpOUTPUTstate[3] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[3], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[3], state);
 		break;
 	case 7: // Feux de route
 		mcpOUTPUTstate[2] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[2], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[2], state);
 		break;
 	case 8:
 
@@ -377,19 +377,19 @@ inline void MCP_23017::activationSortieMCP(byte position,boolean state) {
 		break;
 	case 11: //Fenetre conducteur UP
 		mcpOUTPUTstate[7] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[7], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[7], state);
 		break;
 	case 12: // Fenete conducteur DOWN
 		mcpOUTPUTstate[8] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[8], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[8], state);
 		break;
 	case 13: // Fenetre passage UP
 		mcpOUTPUTstate[9] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[9], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[9], state);
 		break;
 	case 14: // Fenetre passage DOWN
 		mcpOUTPUTstate[10] = state;
-		mcp.digitalWrite(mcpOUTPUTstate[10], state);
+		//mcp.digitalWrite(mcpOUTPUTstate[10], state);
 		break;
 	default:
 		break;
@@ -400,7 +400,7 @@ inline void MCP_23017::activationDesSortie() {
 	//mcpOUTPUTstate
 	//	LASTEmcpOUTPUTstate
 	static unsigned long previousMillis = 0;
-	const int interval = 500;
+	const int interval = 10; // interval to send DATA 
 
 	if (millis() - previousMillis >= interval) {
 		previousMillis = millis();

@@ -17,11 +17,11 @@ reglageDesValeurLumunosite(200, 900, 500, 50, 700); // envoyer les valeur de reg
 //https://www.youtube.com/watch?v=Bw0XL4qsFec
 
 #define photoResistancePIN A1 // sur quelle pin ce trouve la photo resistance (defaut A1)
-#define sunMinValue 150 // valeur lumunosite Min JOUR
-#define sunMaxValue 50 //valeur lumunosite Max JOUR
-#define nightValue 300 // valeur lumunosite NUIT
-#define tunelValue 1020 // valeur lumunosite TUNEL capteur HS
-#define tunelMaxValue 700 // valeur lumunosite MAX
+#define sunMinValue 150 // valeur lumunosite Min JOUR //150
+#define sunMaxValue 10 //valeur lumunosite Max JOUR //50
+#define nightValue 300 // valeur lumunosite NUIT //300
+#define tunelValue 1020 // valeur lumunosite TUNEL capteur HS //1020
+#define tunelMaxValue 700 // valeur lumunosite MAX //700
 
 #define debugAfficherReglage 0 // affichier les reglage dans le moniteur deserie (defaut 0)
 #define debugAffigerConteur 0 // affiche le conteur de changement de lumunosite (defaut 0)

@@ -2,13 +2,15 @@
  Name:		Programe_Principale_Arduino_14_06_2020.ino
  Created:	14/06/2020 17:56
  Author:	Roman
+ 17/07/2020 : rajout de option phares automatique mcp_23017->activationSortieMCP(3, 1);
 */
 
 #include <Arduino.h>
 //#include <Wire.h>
 #include <Adafruit_MCP23017.h>
-//#include "config.h"
+#include "peugeot_config.h"
 
+/*
 #define OPTION_1 1 //Camera de recul
 #define OPTION_2 0 //Phare automatique
 #define OPTION_3 0 //Eclerage d'ambiance d'interieur
@@ -17,31 +19,38 @@
 #define OPTION_6 1 //Communication avec le MCP23017 module controle relais
 #define OPTION_7 1 //Ecran LCD aide a la conduite
 #define OPTION_8 1 //genstion entre sortie
-
-
+*/
+/*
 #if OPTION_5
 	#include "peugeot_HC_05.h"
 #endif // OPTION_5
-
+*/
+/*
 #if OPTION_6
 	#include "peugeot_MCP23017.h"
 #endif // OPTION_6
-
+*/
+/*
 #if OPTION_2
 	#include "peugeot_Automatic_Headlight.h"
 #endif // OPTION_2
+*/
 
+/*
 #if OPTION_8
 	#include "peugeot_InOutArduinoBasic.h"
 #endif // OPTION_8
-
+*/
+/*
 #if OPTION_4
 	#include "peugeot_Esp32_arduino_Serial_communication.h"
 #endif // OPTION_4
-
+*/
+/*
 #if OPTION_7
 	#include "peugeot_screen_LCD_i2c_16x2.h"
 #endif // OPTION_7
+*/
 
 //#include "peugeot_delay.h" // Gestion millis timer
 
@@ -51,36 +60,45 @@ mySerial = new HardwareSerial();
 mySerial->begin(115200);
 */
 
-
+/*
 #if OPTION_5
 	HC_05* hc05; // pointeur vers une instance de classe (si on utilise un pointeur void devez utilise -> a la place)
 #endif // OPTION_5
-
+*/
+	/*
 #if OPTION_6
 	MCP_23017* mcp_23017;
 #endif // OPTION_6
-
+*/
+/*
 #if OPTION_2
 	Automatic_Headlight* automatic_headlight;
 #endif // OPTION_2
-
+*/
+/*
 #if OPTION_8
 	InOutArduinoPin* in_out_arduino_pin;
 #endif // OPTION_8
-
+*/
+/*
 #if OPTION_4
 	Esp32_arduino_serial_communication* esp32_arduino_serial_communication;
 #endif // OPTION_4
-
+*/
+/*
 #if OPTION_7
 	Screen_LCD_i2c_16x2* screen_lcd_i2c_16x2;
 #endif // OPTION_7
+*/
+
 
 
 void setup() {
+	
+	pinMode(LED_PIN_13, OUTPUT);
 
-	//Serial.begin(500000); // vitesse de communication avec le pc
-	Serial.begin(250000); // vitesse de communication avec le pc ARDUINO DUE
+	Serial.begin(500000); // vitesse de communication avec le pc
+	//Serial.begin(250000); // vitesse de communication avec le pc ARDUINO DUE
 
 	Serial.println(F("Programe v1.2 : Programe_Principale_Arduino_14_06_2020.ino"));
 
@@ -94,6 +112,7 @@ void setup() {
 #if OPTION_6
 	mcp_23017 = new MCP_23017(); // ca fonctionne comme un setup
 #endif // OPTION_6
+
 
 #if OPTION_2
 	automatic_headlight = new Automatic_Headlight(); // ca fonctionne comme un setup
@@ -116,11 +135,24 @@ void setup() {
 void loop() {
 
 
-	TIME1.DelayMillis(1000);
+	//TIME1.DelayMillis(1000);
+	//timeR TIME2(1000, millis(), LOW, 0); // TIME1 et TIME2 et l'objet de la classe time
 	/*
-	if (TIME1.DelayMillis(1000) == 1)
+	if(TIME30.DelayMillis(100) == 1)
 	{
 		Serial.println("1");
+
+		if (TIME20.DelayMillis(1000) == 1)
+		{
+			//Serial.println("2");
+
+		}
+	}
+	*/
+	/*
+	if (TIME10.DelayMillis() == 1)
+	{
+		Serial.println("Moteur etait allumer et phares etait allumer aussi ");
 	}
 	*/
 
@@ -173,6 +205,8 @@ void loop() {
 
 	delay(1000);
 	*/
+
+
 }
 
 #if OPTION_5
@@ -181,6 +215,7 @@ void serialEvent1() { // Pour le module Bleutooth
 	hc05->serialEVENT();
 	//Serial.println("Serial even");
 }
+
 #endif // OPTION_5
 
 

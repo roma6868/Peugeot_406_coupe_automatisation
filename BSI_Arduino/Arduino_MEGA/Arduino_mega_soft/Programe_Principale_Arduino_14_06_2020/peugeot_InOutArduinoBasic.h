@@ -45,6 +45,7 @@ public:
 	void outputPWMledSiege();
 	void cameraMarcheArriere();
 	void phareAutomatique();
+	void ClaxonVoitureFermeOuvert();
 
 private:
 
@@ -104,6 +105,7 @@ InOutArduinoPin::~InOutArduinoPin() // destructeur
 {
 }
 
+//==========================================================================================================
 
 inline void InOutArduinoPin::inputBasicPin() {
 
@@ -187,6 +189,7 @@ inline void InOutArduinoPin::inputBasicPin() {
 
 }
 
+//==========================================================================================================
 
 inline void InOutArduinoPin::outputPWMledSiege() {
 
@@ -229,6 +232,8 @@ inline void InOutArduinoPin::outputPWMledSiege() {
 	}
 
 }
+
+//==========================================================================================================
 
 inline void InOutArduinoPin::cameraMarcheArriere() {
 
@@ -292,19 +297,294 @@ inline void InOutArduinoPin::cameraMarcheArriere() {
 	}
 }
 
+//==========================================================================================================
 
 inline void InOutArduinoPin::phareAutomatique() {
 
-	if (luxEtatLumunosite == 1) {
+	switch (etatDuNeiman)
+	{
+	case 0: // contact coupe
 
-		//activationSortieMCP(3, 1);
+#if OPTION_11
+		ClaxonVoitureFermeOuvert();
+#endif //OPTION_11
 
-		//Serial.println("LED state : ON");
+		break;
+	case 5 || 4: // moteur a etait coupe
+#if OPTION_9
+
+		// contact moteur coupe et feux etait allumer alor petit tempo puis on les eteint
+		if (mcpOUTPUTstate[4] == 1 && mcpOUTPUTstate[3] == 1) { // 
+
+	//Serial.println("Je suis la ");
+
+			if (TIME10.DelayMillis() == 1)
+			{
+				Serial.println("Moteur etait allumer et phares etait allumer aussi ");
+				mcp_23017->activationSortieMCP(3, 0); // eteindre Feux de position
+				mcp_23017->activationSortieMCP(6, 0); // allumer Feux de croisement
+			}
+		}
+#endif // OPTION_9
+
+		break;
+	case 3: // contact moteur
+
+		break;
+	case 7: // moteur en marche
+#if OPTION_9
+			//*********************************Pares automatique moteur en marche***************************
+		if (luxEtatLumunosite == 1) {
+
+			mcp_23017->activationSortieMCP(3, 1); // allumer Feux de position
+			mcp_23017->activationSortieMCP(6, 1); // allumer Feux de croisement
+
+			if (TIME4.DelayMillis(1000) == 1)
+			{
+				Serial.println("PHARES state moteur en marche : ON");
+			}
+		}
+		if (luxEtatLumunosite == 0) {
+
+			mcp_23017->activationSortieMCP(3, 0); // eteindre Feux de position
+			mcp_23017->activationSortieMCP(6, 0); // allumer Feux de croisement
+
+			if (TIME4.DelayMillis(1000) == 1)
+			{
+				Serial.println("PHARES state moteur en marche : OFF");
+			}
+		}
+		/*
+		if (delayPhareAutoOff.DelayMillis(10000) == 1)
+		{
+			Serial.println("Moteur etait allumer et phares etait allumer aussi ");
+		}
+		*/
+		//*********************************Pares automatique moteur en marche***************************
+#endif // OPTION_9
+		break;
+	default:
+		break;
 	}
-	if (luxEtatLumunosite == 0) {
 
-		//Serial.println("LED state : OFF");
+
+	//--------------------------controle phare vouture ouvertfermer ou porte ouvert----------------------------------------
+	static byte programePhareAutoMoteurCoupe = 0;
+
+#if OPTION_10
+
+	if (etatDuNeiman == 0 || etatDuNeiman == 1) { // si contact coupe ou contact accesoir
+
+		if (etatVoiture == 0 && etatVoitureAVANT != etatVoiture) { // si letat de la voiture a changer et que la voiture et ouvert = voiture vient detre ouvert
+
+				Serial.println("Voiture vient d'etre ouvert");
+
+			etatVoitureAVANT = etatVoiture;
+			programePhareAutoMoteurCoupe = 1;
+		}
+
+		if (etatVoiture == 1 && etatVoitureAVANT != etatVoiture) { // si letat de la voiture a changer et que la voiture et fermer = voiture vient detre fermer
+
+				Serial.println("Voiture vient d'etre fermer");
+
+			etatVoitureAVANT = etatVoiture;
+			programePhareAutoMoteurCoupe = 1;
+		}
+
+
+		if (etatDesPorte == 0 && etatDesPorteAVANT != etatDesPorte) { // si letat des porte a changer et une porte femerer = une porte a etait fermer
+
+				Serial.println("Une des porte vient d'etre fermer");
+
+				etatDesPorteAVANT = etatDesPorte;
+			programePhareAutoMoteurCoupe = 1;
+		}
+		// si une porte et ouvert (passage ou conducteur) la valeur va a 2 ou 1
+		if (etatDesPorte != 0 && etatDesPorteAVANT != etatDesPorte) { // si letat des porte a changer et que les porte sont par femrer = une ou plusieur porte et ouver
+
+				Serial.println("Une des porte vient d'etre ouvert");
+
+				etatDesPorteAVANT = etatDesPorte;
+			programePhareAutoMoteurCoupe = 1;
+		}
 	}
+
+	if (etatDuNeiman == 3) { // si contact moteur
+		programePhareAutoMoteurCoupe = 3;
+		if (TIME4.DelayMillis(1000) == 1)
+		{
+			Serial.println("Phare automatique moteur arreter Contact moteur mit ");
+		}
+	}
+
+
+	switch (programePhareAutoMoteurCoupe) { // structure le deroulement du programe des phare auto lorque le moteur et a l'arret
+	case 1:
+
+		if (luxEtatLumunosite == 1) { // si il fait nuit
+			Serial.println("Il fait nuit alor on allume les :");
+
+			if (etatDesPorte != 0)
+			{ // si une des portes et ouvert
+				Serial.println("Feux de croisement ON");
+				Serial.println("Feux de brouillard Avant ON");
+				mcp_23017->activationSortieMCP(3, 0); // eteindre feux de position
+				mcp_23017->activationSortieMCP(6, 1); // allumer Feux de croisement
+				mcp_23017->activationSortieMCP(4, 1); // eteindre Feux de brouillard AV
+				ledSiegeEtat = 2; // allumer les LED sous les siege mode PWM
+				programePhareAutoMoteurCoupe = 2;
+			}
+
+			else // alors pas de porte ouver
+			{
+				Serial.println("Feux de position ON");
+				Serial.println("Feux de croisement ON");
+				mcp_23017->activationSortieMCP(3, 1); // allumer Feux de position
+				mcp_23017->activationSortieMCP(6, 1); // allumer Feux de croisement
+				mcp_23017->activationSortieMCP(4, 0); // eteindre Feux de brouillard AV
+				ledSiegeEtat = 2; // allumer les LED sous les siege mode PWM
+				programePhareAutoMoteurCoupe = 2;
+			}
+
+		}
+		else // alor il fait jours !
+		{
+			Serial.println("Il fait jours alor on allume les :");
+			Serial.println("Feux de brouillard Avant ON");
+			mcp_23017->activationSortieMCP(4,1);// allumer feux de brouillard avant
+			ledSiegeEtat = 0; // allumer les LED sous les siege mode PWM
+			programePhareAutoMoteurCoupe = 2;
+		}
+		break;
+
+	case 2:
+
+		static int i = 0;
+
+		if (TIME5.DelayMillis(1000) == 1) {
+			
+			i++;
+			Serial.println(i);
+		}
+
+	//	if (TIME6.DelayMillis(20000) == 1) { // si pas de changement d'etat constate apres alllumage des pharesen les etait apres une tempo
+		//	programePhareAutoMoteurCoupe = 3;
+			//Serial.println("Je suis ici DELAY");
+		//}
+
+		if (TIME11.DelayMillis() == 1)
+		{
+		programePhareAutoMoteurCoupe = 3;
+		i = 0;
+		Serial.println("Je suis ici DELAY");
+
+		}
+		break;
+
+	case 3:
+
+		// si un des feux et allumer on les etaint
+		if (mcpOUTPUTstate[2] == 1 || mcpOUTPUTstate[3] == 1 || mcpOUTPUTstate[4] == 1 || mcpOUTPUTstate[5] == 1 || mcpOUTPUTstate[6] == 1)
+		{
+
+			Serial.println("Compteur delais des feux auto moteur arreter");
+			Serial.println("Feux de position OFF");
+			Serial.println("Feux de croisement OFF");
+			Serial.println("Feux de brouillard Avant OFF");
+
+			mcp_23017->activationSortieMCP(3, 0); // eteindre Feux de position
+			mcp_23017->activationSortieMCP(6, 0); // eteindre Feux de croisement
+			mcp_23017->activationSortieMCP(4, 0); // eteindre Feux de brouillard AV
+			ledSiegeEtat = 0; // allumer les LED sous les siege mode PWM
+
+		}
+
+
+		programePhareAutoMoteurCoupe = 0;
+		break;
+	}
+	//--------------------------controle phare vouture ouvertfermer ou porte ouvert----------------------------------------
+#endif // OPTION_10
+
 
 }
 #endif // InOutArduinoBasic_h
+//==========================================================================================================
+
+
+inline void InOutArduinoPin::ClaxonVoitureFermeOuvert() {
+
+	static byte etape = 1;
+
+	if (etatVoiture == 1 && etape == 1) { // voiture fermer
+
+		mcp_23017->activationSortieMCP(0, 1); // allumer claxon
+
+		if (TIME20.DelayMillis() == 1)
+		{
+			digitalWrite(LED_PIN_13, LOW);
+			Serial.println("0");
+			mcp_23017->activationSortieMCP(0, 0); // eteindre claxon
+			//mcp_23017->activationSortieMCP(5, 0);
+			etape = 2;
+		}
+
+		
+	}
+	if (etatVoiture == 0 && etape == 2) { // voiture ouvert
+
+		static byte w = 0;
+
+		//mcp_23017->activationSortieMCP(0, 1); // allumer claxon
+
+		if (TIME20.DelayMillis() == 1 && w == 0)
+		{
+			digitalWrite(LED_PIN_13, LOW);
+			Serial.println("00");
+			//mcp_23017->activationSortieMCP(0, 0); // eteindre claxon
+			//mcp_23017->activationSortieMCP(0, 1); // allumer claxon
+			w = 1;
+		
+		}
+		
+		if (TIME30.DelayMillis() == 1 && w == 1)
+		{
+			digitalWrite(LED_PIN_13, LOW);
+			Serial.println("000");
+			//mcp_23017->activationSortieMCP(0, 0); // eteindre claxon
+			w = 0;
+			etape = 1;
+		}
+
+
+		
+	}
+
+
+	/*
+	static bool BB = 0;
+
+	//	if (essueGlaceAuto == 1 && BB == 0) {
+
+			//Serial.println("Je suis ici");
+
+	if (BB == 0)
+	{
+		mcp_23017->activationSortieMCP(0, 1); // allumer claxon
+		//mcp_23017->activationSortieMCP(5, 1);
+		digitalWrite(LED_PIN_13, HIGH);
+		Serial.println("1");
+
+	}
+
+	if (TIME20.DelayMillis() == 1 && BB == 0)
+	{
+		digitalWrite(LED_PIN_13, LOW);
+		Serial.println("0");
+		mcp_23017->activationSortieMCP(0, 0); // eteindre claxon
+		//mcp_23017->activationSortieMCP(5, 0);
+		BB = 1;
+
+	}
+	*/
+}

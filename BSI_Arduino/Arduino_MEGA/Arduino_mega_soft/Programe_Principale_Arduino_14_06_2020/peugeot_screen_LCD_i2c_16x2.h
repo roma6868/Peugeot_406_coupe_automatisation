@@ -4,10 +4,12 @@
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h>
 #include "peugeot_config.h"
+#include "peugeot_LCD_image.h" // images for LCD 16x2
 
-#define DEBUG_affiche_donne_envoyer 0 
+#define DEBUG_affiche_donne_envoyer 0
+#define DEBUG_force_on_LCD 0 // force l'alumage de l'ecran meme si contact coupe voiture
 
-LiquidCrystal_I2C lcd(0x27, 20, 2); // set the LCD address to 0x27 for a 16 chars and 2 line display
+LiquidCrystal_I2C lcd(0x27, 16, 2); // set the LCD address to 0x27 for a 16 chars and 2 line display
 
 
 class Screen_LCD_i2c_16x2
@@ -27,8 +29,12 @@ Screen_LCD_i2c_16x2::Screen_LCD_i2c_16x2()
 	lcd.init(); // initaliser arduino LCD
 	lcd.backlight(); // Allumer LCD
 	//lcd.noBacklight(); // Eteindre LCD
+	lcd.createChar(0, BT_image);
+	lcd.createChar(1, FEUX_CROISEMENT_image);
+	lcd.createChar(2, FEUX_route_image);
+
 	Serial.println(F("=> LCD i2c 16x2 <="));
-	
+
 }
 
 Screen_LCD_i2c_16x2::~Screen_LCD_i2c_16x2()
@@ -45,12 +51,27 @@ void Screen_LCD_i2c_16x2::envoyerDonneAuLCD() {
 
 		afficheDonneLCD();
 	}
-	
+
 	//TIME1.DelayMillis(1000);
 }
 
 int Screen_LCD_i2c_16x2::afficheDonneLCD()
 {
+
+
+
+
+
+	if (busVanAlimenterPin == 0)
+	{
+#if DEBUG_force_on_LCD
+		lcd.noBacklight(); // Eteindre LCD
+#endif // DEBUG_force_on_LCD
+	}
+	else
+	{
+		lcd.backlight(); // Allumer LCD
+	}
 
 	if (etatVoiture == 0 && etatDuNeiman == 0) { // voiture ouvert et pas de contact
 
@@ -123,7 +144,7 @@ int Screen_LCD_i2c_16x2::afficheDonneLCD()
 	}
 	if (etatDuNeiman == 7) { // position accesoir
 		lcd.setCursor(0, 0);
-		lcd.print("RPM:           ");
+		lcd.print("RPM:          ");
 		lcd.setCursor(5, 0);
 		lcd.print(rpmDecoded, DEC);
 
@@ -132,6 +153,9 @@ int Screen_LCD_i2c_16x2::afficheDonneLCD()
 		lcd.setCursor(7, 1);
 		lcd.print(speedDecoded, DEC);
 
+		lcd.setCursor(13, 0);
+		lcd.createChar(0, FEUX_CROISEMENT_image);
+		lcd.write(byte(0));
 
 		switch (etatClignotant) { // etat des clignotant
 		case 2:

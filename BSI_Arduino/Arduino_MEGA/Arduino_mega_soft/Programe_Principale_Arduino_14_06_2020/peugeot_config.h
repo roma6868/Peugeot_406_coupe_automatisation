@@ -2,9 +2,28 @@
 
 #include <Arduino.h>
 #include "peugeot_delay.h" // Gestion millis timer
+#include "TEST_peugeot_delay.h" // TEST!!!!!!
+
+#define OPTION_1 1 //Camera de recul
+#define OPTION_2 1 //Phare automatique
+#define OPTION_3 0 //Eclerage d'ambiance d'interieur
+#define OPTION_4 1 //Communication avec ESP32 
+#define OPTION_5 1 //Communication avec module Bleutooth
+#define OPTION_13 0 //Communication avec le BSI via prise OBD 
+#define OPTION_6 1 //Communication avec le MCP23017 module controle relais
+#define OPTION_7 1 //Ecran LCD 16X2 aide a la conduite
+#define OPTION_8 1 //Genstion entre sortie
+#define OPTION_9 1 //Allumages des phares automatiquement moteur en marche
+#define OPTION_10 1 //Allumages des phares lorquil fait nuit et la voiture a etait ouvert ou une porte
+#define OPTION_11 1 //Claxoné quand la voiture a etait ouvertou lorsequelle a etait ferme
+#define OPTION_12 0 //Verouiller les porte quand la vitesse et superieur a 30km/h
+
+
 
 #ifndef peugeot_config_h
 #define peugeot_config_h
+
+int LED_PIN_13 = 13;
 
 //----------------------------------------------------mcp23017 OUTPUT ARRAY---------------
 /*
@@ -78,8 +97,8 @@ uint8_t etatDesPorte;
 
 // tout les variable qui stoque les donne recus sur le port serie
 
-uint8_t etatDesPorteAVANT;
-uint8_t etatVoitureAVANT;
+uint8_t etatDesPorteAVANT; // stoque l'etat avant pour voir le changement d'etat
+uint8_t etatVoitureAVANT; // stoque l'etat avant pour voir le changement d'etat
 //-------------------------------------------ESP 32 ARDUINO communication---------------------------------------------
 
 uint8_t telephoneConnecteBLEUTOOTH = 0; // variable qui dit si un telephne et connecte en bleutoot<
@@ -121,5 +140,39 @@ boolean LASTEstateOUTPUTFermerOuvrirToutLesFenetre = 0; //0 = eteint; 1 = allume
 //*******************************************L'encian etat de la sortie***************************
 */
 
+
+
+
 //********************************************************Variable GLOBAL pour les sortie*************************************************************************
 #endif // confi_h
+
+#if OPTION_6
+#include "peugeot_MCP23017.h"
+MCP_23017* mcp_23017;
+#endif // OPTION_6
+
+
+#if OPTION_5
+#include "peugeot_HC_05.h"
+HC_05* hc05; // pointeur vers une instance de classe (si on utilise un pointeur void devez utilise -> a la place)
+#endif // OPTION_5
+
+#if OPTION_2
+#include "peugeot_Automatic_Headlight.h"
+Automatic_Headlight* automatic_headlight;
+#endif // OPTION_2
+
+#if OPTION_8
+#include "peugeot_InOutArduinoBasic.h"
+InOutArduinoPin* in_out_arduino_pin;
+#endif // OPTION_8
+
+#if OPTION_4
+#include "peugeot_Esp32_arduino_Serial_communication.h"
+Esp32_arduino_serial_communication* esp32_arduino_serial_communication;
+#endif // OPTION_4
+
+#if OPTION_7
+#include "peugeot_screen_LCD_i2c_16x2.h"
+Screen_LCD_i2c_16x2* screen_lcd_i2c_16x2;
+#endif // OPTION_7

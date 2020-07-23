@@ -1,13 +1,13 @@
 #include <Arduino.h>
 
-#ifndef peugeot_delay_h
-#define peugeot_delay_h
+#ifndef delay_h
+#define delay_h
 
-class timeR
+class time
 {
 public:
-	timeR(); // constucteur 
-	~timeR(); // destructeur
+	time(); // constucteur 
+	~time(); // destructeur
 	bool DelayMillis_TRUE_FALSE(int delay);
 	bool DelayMillis(int delay);
 	
@@ -20,9 +20,9 @@ private:
 
 };
 
-timeR TIME1, TIME2, TIME3, TIME4; // TIME1 et TIME2 et l'objet de la classe time
+time TIME1, TIME2, TIME3, TIME4, TIME5, TIME6, TIME7, TIME8; // TIME1 et TIME2 et l'objet de la classe time
 
-timeR::timeR() // constructeur
+time::time() // constructeur
 {
 	//Serial.println("Millis INIT");
 	State = LOW;
@@ -31,7 +31,7 @@ timeR::timeR() // constructeur
 	
 }
 
-timeR::~timeR() // destructeur
+time::~time() // destructeur
 {
 	/* Rien à mettre ici car on ne fait pas d'allocation dynamique
 	dans la classe Personnage. Le destructeur est donc inutile mais
@@ -40,7 +40,7 @@ timeR::~timeR() // destructeur
 	autres vérifications si nécessaire avant la destruction de l'objet. */
 } 
 
-bool timeR::DelayMillis_TRUE_FALSE(int delay) { //envoyer un 1 ou 0 en fonction du delay demande
+bool time::DelayMillis_TRUE_FALSE(int delay) { //envoyer un 1 ou 0 en fonction du delay demande
 
 	interval = delay;
 
@@ -60,7 +60,7 @@ bool timeR::DelayMillis_TRUE_FALSE(int delay) { //envoyer un 1 ou 0 en fonction 
 	return State;
 }
 
-bool timeR::DelayMillis(int delay) { // envoye que un 1 lorsque le temp de tempo et arrive a la fin 
+bool time::DelayMillis(int delay) { // envoye que un 1 lorsque le temp de tempo et arrive a la fin 
 
 	interval = delay;
 
