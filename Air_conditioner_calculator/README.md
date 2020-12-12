@@ -99,7 +99,28 @@ __Unité W/m2__
  - 14 kOhm = 6270 w/m2
  - 10,3 kOhm = 7000 w/m2 MAX
 
-
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8033.jpg" alt="" style="float: right;" width="361" height="220" /></p>
 
+----
 
+<strong>8031 : thermistance d'eau</strong>
+On fonction des valeurs des résistances j’obtenait la température suivante.
+D’apres le PP2000 la valeur doit rester entre 0,25 < U < 4,6 v entre les bornes 2 et 7 du 26V JN 
+
+__Unité C°__
+
+ - 1 kOhm = 80 C° MAX
+ - 5 kOhm = 40 C°
+ - 10 kOhm = 24 C°
+ - 15 kOhm = 15 C°
+ - 20 kOhm = 10 C°
+ - 33 kOhm = 0 C°
+ - 47 kOhm = -1 C°
+ - 90 kOhm = -19 C°
+ - 100 kOhm = -20 C°
+ - 133 kOhm = -25 C°
+ - 144 kOhm = -27 C° MIN
+
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8031.jpg" alt="" style="float: right;" width="318" height="248" /></p>
+
+----
