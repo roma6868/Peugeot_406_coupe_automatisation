@@ -129,10 +129,17 @@ __Unité C°__
 
 ----
 
-<strong>8006 : thermistance évaporateur</strong>
+<strong>8006 : thermistance évaporateur</strong>   
 Pour faire fonctionne le calculateur climatisation sur le stend il faut absolument relier une résistance 22 kOhm (par exemple) a la place de la thermistance évaporateur sur le 
 connecteur BSI 12V MR du BSI.  
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8006.jpg" alt="" style="float: right;" width="370" height="350" /></p>
+
+----
+<strong>8045 : module commande pulseur</strong>  
+Nombre de vitesse de ventilation : 7 
+
+
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/module_commande_pulseur_air.jpg" alt="" style="float: right;" width="359" height="325750" /></p>
 
 
