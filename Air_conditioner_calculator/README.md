@@ -35,7 +35,8 @@ Software version: 0802
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PCB_Calculateur_climatisation.jpg" alt="" style="float: right;" width="487" height="213" /></p>
 
-### Connecteur 26V JN (contrôler les diffèrent actionneur de la climatisation automatique)  
+----
+### Connecteur 26V JN   
 
 Voici les 2 composant qui s’occupe de contrôler les diffèrent actionneur de la climatisation automatique.  
 Leur broche de sortie sont directement relier au connecteur jaune ( 26V JN ).  
@@ -43,9 +44,13 @@ Leur broche de sortie sont directement relier au connecteur jaune ( 26V JN ).
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/26V_JN.jpg" alt="" style="float: right;" width="1331" height="510" /></p>
 
-<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/ce_qui_est_connnecter_26V_JN.jpg" alt="" style="float: right;" width="984" height="355" /></p>
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/ce_qui_est_connnecter_26V_JN.jpg" alt="" style="float: right;" width="984" height="331" /></p>
 
+ghfghgfhgf
 
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/26V_JN_input.jpg" alt="" style="float: right;" width="413" height="355" /></p>
+
+----
 ### Connecteur 6J NR  
 
 
