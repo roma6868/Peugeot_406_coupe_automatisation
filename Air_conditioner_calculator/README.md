@@ -12,14 +12,14 @@
 <blockquote><span lang="en">Software version: 0802<br /></span>
 <p><span lang="en"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/roma6868/Peugeot_406_coupe_automatisation/master/Air_conditioner_calculator/photo_component_extern_air_conditioning/8080/element_8060%20(1).jpg" alt="" width="359" height="133" /></span></p>
 </blockquote>
-8030 : thermistance air habitacle
-8033 : thermistance d'ensoleillement
-8031 : thermistance d'eau
-8070 : motor&eacute;ducteur volet entr&eacute;e air
-8065 : motor&eacute;ducteur volet de mixage
-8071 : motor&eacute;ducteur volet de distribution
-8045 : module commande pulseur
-8050 : moteur pulseur
-8080 : calculateur climatisation
+8030 : thermistance air habitacle <br>
+8033 : thermistance d'ensoleillement <br>
+8031 : thermistance d'eau <br>
+8070 : motor&eacute;ducteur volet entr&eacute;e air <br>
+8065 : motor&eacute;ducteur volet de mixage <br>
+8071 : motor&eacute;ducteur volet de distribution <br>
+8045 : module commande pulseur <br>
+8050 : moteur pulseur <br>
+8080 : calculateur climatisation <br>
 
 </html>
