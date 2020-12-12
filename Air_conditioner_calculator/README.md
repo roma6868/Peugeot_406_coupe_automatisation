@@ -53,4 +53,7 @@ INPUT capteur de luminosite, temperature eau moteur, module pulseur air
 ----
 ### Connecteur 6J NR  
 
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/connecteur_6V_GR_et_elmos17010B.jpg" alt="" style="float: right;" width="901" height="645" /></p>
+
+
 
