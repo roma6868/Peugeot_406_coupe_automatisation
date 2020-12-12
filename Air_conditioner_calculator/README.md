@@ -1,7 +1,7 @@
 # Calculateur climatisation automatique
 
-Ref: PSA 9640045680  
-Software version: 0802  
+<strong>Ref:</strong> PSA 9640045680  
+<strong>Software version:</strong> 0802  
 
 <p><img src="https://raw.githubusercontent.com/roma6868/Peugeot_406_coupe_automatisation/master/Air_conditioner_calculator/photo_component_extern_air_conditioning/8080/element_8060%20(1).jpg" alt="" style="float: right;" width="487" height="213" /></p>
 
@@ -23,7 +23,7 @@ Software version: 0802
 
 ------  
 
-### Implantation des diffèrent capteur et actionneur sur le bloc de ventilation.  
+### Implantation des diffèrents capteur et actionneur sur le bloc de ventilation.  
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/implantation_composant_dans_la_voiture.jpg" alt="" style="float: right;" width="468" height="311" /></p>
 
@@ -67,7 +67,7 @@ Il est utilise comme convertiseur DC/DC 12V => 5v , mais aussi comme ADC les dif
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Connection_electrique_ELMOS_14010B.jpg" alt="" style="float: right;" width="624" height="382" /></p>
 
 ----
-
+### STEND pour les essais
 
 
 ----
