@@ -42,11 +42,11 @@ Voici les 2 composant qui s’occupe de contrôler les diffèrent actionneur de la c
 Leur broche de sortie sont directement relier au connecteur jaune ( 26V JN ).  
 
 
-<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/26V_JN.jpg" alt="" style="float: right;" width="1331" height="510" /></p>
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/26V_JN.jpg" alt="" style="float: right;" width="1331" height="410" /></p>
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/ce_qui_est_connnecter_26V_JN.jpg" alt="" style="float: right;" width="984" height="331" /></p>
 
-ghfghgfhgf
+INPUT capteur de luminosite, temperature eau moteur, module pulseur air
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/26V_JN_input.jpg" alt="" style="float: right;" width="413" height="355" /></p>
 
