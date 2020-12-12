@@ -62,8 +62,7 @@ Il est utilise comme convertiseur DC/DC 12V => 5v , mais aussi comme ADC les dif
 
 ----
 
-
-8030 : thermistance air habitacle
+<strong>8030 : thermistance air habitacle</strong>
 En fonction des valeurs des résistances j’obtenait la température suivante.
 D’apres le PP2000 la valeur doit rester entre 0,25 < U < 4,6 V entre les bornes 2 et 4 du 6V GR 
 
@@ -81,8 +80,12 @@ __Unité C°__
  - 133 kOhm = -25 C°
  - 144 kOhm = -27 C° <strong>MIN</strong>
 
-
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8030.jpg" alt="" style="float: right;" width="548" height="308" /></p>
 
+----
+
+<strong>8033 : thermistance d‘ensoleillement</strong>
+
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8033.jpg" alt="" style="float: right;" width="361" height="220" /></p>
 
 
