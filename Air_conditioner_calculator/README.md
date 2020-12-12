@@ -143,10 +143,10 @@ Nombre de vitesse de ventilation : 7
 
 <strong>Commande du pulseur:</strong>  
 
-Le signal envoyer par le calculateur climatisation au module 8045 qui commande la vitesse du pulseur  et de type PWM.
-Fréquence : 1,966kHz
-Il varie de 0% a 100 %
-De 0V au 12V
+Le signal envoyer par le calculateur climatisation au module 8045 qui commande la vitesse du pulseur et de type PWM.
+Fréquence : 1,966kHz  
+Il varie de 0% a 100 %  
+De 0V au 12V  
 
  - Vitesse 0 = 0V = 0%
  - Vitesse 1 = 4,86V = 17,8% 
@@ -158,6 +158,6 @@ De 0V au 12V
  - Vitesse 7 = 12V = 100%
 
 
-<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PWN_signal_pulseur_air.jpg" alt="" style="float: right;" width="1296" height="300" /></p>
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PWN_signal_pulseur_air.jpg" alt="" style="float: right;" width="1296" height="250" /></p>
 
 
