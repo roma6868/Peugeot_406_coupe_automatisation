@@ -9,15 +9,15 @@ Software version: 0802
 
 ### Schéma électrique de la climatisation 
 
- - 8030 : thermistance air habitacle  
- - 8033 : thermistance d'ensoleillement  
- - 8031 : thermistance d'eau  
- - 8070 : motoréducteur volet entrée air  
- - 8065 : motoréducteur volet de mixage  
- - 8071 : motoréducteur volet de distribution  
- - 8045 : module commande pulseur  
- - 8050 : moteur pulseur  
- - 8080 : calculateur climatisation  
+ - <strong>8030</strong> : thermistance air habitacle  
+ - <strong>8033</strong> : thermistance d'ensoleillement  
+ - <strong>8031</strong> : thermistance d'eau  
+ - <strong>8070</strong> : motoréducteur volet entrée air  
+ - <strong>8065</strong> : motoréducteur volet de mixage  
+ - <strong>8071</strong> : motoréducteur volet de distribution  
+ - <strong>8045</strong> : module commande pulseur  
+ - <strong>8050</strong> : moteur pulseur  
+ - <strong>8080</strong> : calculateur climatisation  
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Wiring_diagram.jpg" alt="" style="float: right;" width="477" height="356" /></p>
 
@@ -25,13 +25,13 @@ Software version: 0802
 ### PCB Calculateur climatisation  
 
  - <strong>ELMOS 14010B</strong> : 12v => 5v convertisseur , entre analogique (Pas de datasheet trouve)  
- - TSS461C : VAN DATA link controller  
- - ALCATEL REM0339 : VAN line drive  
- - NEC DSF-75076335 : Microcontrôleur pas d’information trouve   
- - ELMOS 91001A : Low side driver 8 channel , serial interface  
- - TLE4207G : Dual Half Bridge Driver DC motor management  
- - HEF4013B : Dual D-type flip-flop  
- - M95160 : 16-Kbit serial SPI  bus EEPROM  
+ - <strong>TSS461C</strong> : VAN DATA link controller  
+ - <strong>ALCATEL</strong> REM0339 : VAN line drive  
+ - <strong>NEC DSF-75076335</strong> : Microcontrôleur pas d’information trouve   
+ - <strong>ELMOS 91001A</strong> : Low side driver 8 channel , serial interface  
+ - <strong>TLE4207G</strong> : Dual Half Bridge Driver DC motor management  
+ - <strong>HEF4013B</strong> : Dual D-type flip-flop  
+ - <strong>M95160</strong> : 16-Kbit serial SPI  bus EEPROM  
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PCB_Calculateur_climatisation.jpg" alt="" style="float: right;" width="487" height="213" /></p>
 
