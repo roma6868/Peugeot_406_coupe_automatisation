@@ -139,7 +139,25 @@ connecteur BSI 12V MR du BSI.
 <strong>8045 : module commande pulseur</strong>  
 Nombre de vitesse de ventilation : 7 
 
-
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/module_commande_pulseur_air.jpg" alt="" style="float: right;" width="359" height="257" /></p>
+
+<strong>Commande du pulseur:</strong>  
+
+Le signal envoyer par le calculateur climatisation au module 8045 qui commande la vitesse du pulseur  et de type PWM.
+Fréquence : 1,966kHz
+Il varie de 0% a 100 %
+De 0V au 12V
+
+ - Vitesse 0 = 0V = 0%
+ - Vitesse 1 = 4,86V = 17,8% 
+ - Vitesse 2 = 5,27V = 20,7%
+ - Vitesse 3 = 6,69V = 29,8%
+ - Vitesse 4 = 7,70V = 38,8%
+ - Vitesse 5 = 8,72V = 48,0%
+ - Vitesse 6 = 9,73V = 57,9%
+ - Vitesse 7 = 12V = 100%
+
+
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PWN_signal_pulseur_air.jpg" alt="" style="float: right;" width="359" height="257" /></p>
 
 
