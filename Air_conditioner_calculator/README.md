@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-	left;" data-placeholder="Traduction"><strong><span lang="en">Air conditioning calculator</span></strong></h1>
+<h1 id="tw-target-text" class="tw-data-text tw-text-large XcVN5d tw-ta" dir="ltr" style="text-align: left;" data-placeholder="Traduction"><strong><span lang="en">Air conditioning calculator</span></strong></h1>
 <p><strong><span lang="en">Ref: PSA 9640045680</span></strong></p>
 	
 	
