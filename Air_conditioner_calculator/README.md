@@ -42,7 +42,8 @@ Leur broche de sortie sont directement relier au connecteur jaune ( 26V JN ).
 
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Output_control_moteur.jpg" alt="" style="float: right;" width="439" height="333" /></p>
-
+<br>
+<p><img src="Output_control_moteur_detail.jpg" alt="" style="float: right;" width="439" height="333" /></p>
 
 
 
