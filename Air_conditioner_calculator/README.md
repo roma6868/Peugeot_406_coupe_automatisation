@@ -3,17 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
-        <header>        </header>
-        <main>
-    
-        </main>
-        <footer>
-    
-        </footer>
-    </body>
+
+	left;" data-placeholder="Traduction"><strong><span lang="en">Air conditioning calculator</span></strong></h1>
+<p><strong><span lang="en">Ref: PSA 9640045680</span></strong></p>
+	
+	
 </html>
