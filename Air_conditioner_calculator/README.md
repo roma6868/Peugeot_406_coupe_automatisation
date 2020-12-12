@@ -62,6 +62,10 @@ Il est utilise comme convertiseur DC/DC 12V => 5v , mais aussi comme ADC les dif
 
 ----
 
+
+
+----
+
 <strong>8030 : thermistance air habitacle</strong>
 En fonction des valeurs des résistances j’obtenait la température suivante.
 D’apres le PP2000 la valeur doit rester entre 0,25 < U < 4,6 V entre les bornes 2 et 4 du 6V GR 
@@ -97,7 +101,7 @@ __Unité W/m2__
  - 22 kOhm = 5170 w/m2
  - 15 kOhm = 6050 w/m2
  - 14 kOhm = 6270 w/m2
- - 10,3 kOhm = 7000 w/m2 MAX
+ - 10,3 kOhm = 7000 w/m2 <strong>MAX</strong>
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8033.jpg" alt="" style="float: right;" width="361" height="220" /></p>
 
@@ -109,7 +113,7 @@ D’apres le PP2000 la valeur doit rester entre 0,25 < U < 4,6 v entre les bornes 
 
 __Unité C°__
 
- - 1 kOhm = 80 C° MAX
+ - 1 kOhm = 80 C° <strong>MAX</strong>
  - 5 kOhm = 40 C°
  - 10 kOhm = 24 C°
  - 15 kOhm = 15 C°
@@ -119,8 +123,16 @@ __Unité C°__
  - 90 kOhm = -19 C°
  - 100 kOhm = -20 C°
  - 133 kOhm = -25 C°
- - 144 kOhm = -27 C° MIN
+ - 144 kOhm = -27 C° <strong>MIN</strong>
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8031.jpg" alt="" style="float: right;" width="318" height="248" /></p>
 
 ----
+
+<strong>8006 : thermistance évaporateur</strong>
+Pour faire fonctionne le calculateur climatisation sur le stend il faut absolument relier une résistance 22 kOhm (par exemple) a la place de la thermistance évaporateur sur le 
+connecteur BSI 12V MR du BSI.  
+
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8006.jpg" alt="" style="float: right;" width="370" height="350" /></p>
+
+
