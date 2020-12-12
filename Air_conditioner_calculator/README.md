@@ -21,7 +21,5 @@ Software version: 0802
 8050 : moteur pulseur  
 8080 : calculateur climatisation  
 
-<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Wiring_diagram.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="135" height="135" /></p>
-
-
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Wiring_diagram.jpg" alt="" style="float: right;" width="135" height="135" /></p>
 
