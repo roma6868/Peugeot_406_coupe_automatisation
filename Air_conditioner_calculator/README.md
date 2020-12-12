@@ -20,12 +20,8 @@ Software version: 0802
 8045 : module commande pulseur  
 8050 : moteur pulseur  
 8080 : calculateur climatisation  
-<p>
-<span lang="en">
-<img style="display: block; margin-center: auto; margin-center: auto;" src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Wiring_diagram.jpg" alt="" width="359" height="133" />
-</span>
-</p>
 
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Wiring_diagram.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="135" height="135" /></p>
 
 
 
