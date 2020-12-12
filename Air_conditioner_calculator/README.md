@@ -22,7 +22,7 @@ Software version: 0802
 8080 : calculateur climatisation  
 <p>
 <span lang="en">
-<img style="display: block; margin-center: auto; margin-right: auto;" src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Wiring_diagram.jpg" alt="" width="359" height="133" />
+<img style="display: block; margin-center: auto; margin-center: auto;" src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Wiring_diagram.jpg" alt="" width="359" height="133" />
 </span>
 </p>
 
