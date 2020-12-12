@@ -55,7 +55,34 @@ INPUT capteur de luminosite, temperature eau moteur, module pulseur air
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/connecteur_6V_GR_et_elmos17010B.jpg" alt="" style="float: right;" width="450" height="322" /></p>
 
+### ELMOS14010B  
+
+Il est utilise comme convertiseur DC/DC 12V => 5v , mais aussi comme ADC les different capteur sont relier a lui  
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Connection_electrique_ELMOS_14010B.jpg" alt="" style="float: right;" width="624" height="382" /></p>
+
+----
+
+
+8030 : thermistance air habitacle
+En fonction des valeurs des résistances j’obtenait la température suivante.
+D’apres le PP2000 la valeur doit rester entre 0,25 < U < 4,6 V entre les bornes 2 et 4 du 6V GR 
+
+__Unité C°__
+
+ - 1 kOhm = 80 C° <strong>MAX</strong>
+ - 5 kOhm = 40 C°
+ - 10 kOhm = 24 C°
+ - 15 kOhm = 15 C°
+ - 20 kOhm = 10 C°
+ - 33 kOhm = 0 C°
+ - 47 kOhm = -1 C°
+ - 90 kOhm = -19 C°
+ - 100 kOhm = -20 C°
+ - 133 kOhm = -25 C°
+ - 144 kOhm = -27 C° <strong>MIN</strong>
+
+
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8030.jpg" alt="" style="float: right;" width="548" height="308" /></p>
 
 
 
