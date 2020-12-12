@@ -27,13 +27,24 @@ Software version: 0802
  - <strong>ELMOS 14010B</strong> : 12v => 5v convertisseur , entre analogique (Pas de datasheet trouve)  
  - <strong>TSS461C</strong> : VAN DATA link controller  
  - <strong>ALCATEL</strong> REM0339 : VAN line drive  
- - <strong>NEC DSF-75076335</strong> : Microcontrôleur pas d’information trouve   
+ - <strong>NEC DSF-75076335</strong> : Microcontrôleur (pas d’information trouve)   
  - <strong>ELMOS 91001A</strong> : Low side driver 8 channel , serial interface  
  - <strong>TLE4207G</strong> : Dual Half Bridge Driver DC motor management  
  - <strong>HEF4013B</strong> : Dual D-type flip-flop  
  - <strong>M95160</strong> : 16-Kbit serial SPI  bus EEPROM  
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PCB_Calculateur_climatisation.jpg" alt="" style="float: right;" width="487" height="213" /></p>
+
+### Connecteur 26V JN (contrôler les diffèrent actionneur de la climatisation automatique)  
+
+Voici les 2 composant qui s’occupe de contrôler les diffèrent actionneur de la climatisation automatique.  
+Leur broche de sortie sont directement relier au connecteur jaune ( 26V JN ).  
+
+
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Output_control_moteur.jpg" alt="" style="float: right;" width="487" height="213" /></p>
+
+
+
 
 
 
