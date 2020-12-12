@@ -6,7 +6,7 @@ Software version: 0802
 <p><img src="https://raw.githubusercontent.com/roma6868/Peugeot_406_coupe_automatisation/master/Air_conditioner_calculator/photo_component_extern_air_conditioning/8080/element_8060%20(1).jpg" alt="" style="float: right;" width="487" height="213" /></p>
 
 ----  
-<br>
+
 ### Schéma électrique de la climatisation 
 
  - 8030 : thermistance air habitacle  
@@ -24,7 +24,7 @@ Software version: 0802
 ----
 ### PCB Calculateur climatisation  
 
- - ELMOS 14010B : 12v => 5v convertisseur , entre analogique (Pas de datasheet trouve)  
+ - <strong>ELMOS 14010B</strong> : 12v => 5v convertisseur , entre analogique (Pas de datasheet trouve)  
  - TSS461C : VAN DATA link controller  
  - ALCATEL REM0339 : VAN line drive  
  - NEC DSF-75076335 : Microcontrôleur pas d’information trouve   
