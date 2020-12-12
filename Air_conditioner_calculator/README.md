@@ -158,6 +158,6 @@ De 0V au 12V
  - Vitesse 7 = 12V = 100%
 
 
-<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PWN_signal_pulseur_air.jpg" alt="" style="float: right;" width="1296" height="200" /></p>
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PWN_signal_pulseur_air.jpg" alt="" style="float: right;" width="1296" height="300" /></p>
 
 
