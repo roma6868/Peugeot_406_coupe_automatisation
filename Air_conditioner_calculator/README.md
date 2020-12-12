@@ -85,6 +85,20 @@ __Unité C°__
 ----
 
 <strong>8033 : thermistance d‘ensoleillement</strong>
+On fonction des valeurs des résistances j’obtenait des valeur d’ensoleillement suivant . 
+
+__Unité W/m2__
+
+ - 110 kOhm = 1000 w/m2
+ - 100 kOhm = 1180 w/m2
+ - 82 kOhm = 1590 w/m2
+ - 51 kOhm = 2770 w/m2
+ - 33 kOhm = 3950 w/m2
+ - 22 kOhm = 5170 w/m2
+ - 15 kOhm = 6050 w/m2
+ - 14 kOhm = 6270 w/m2
+ - 10,3 kOhm = 7000 w/m2 MAX
+
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/8033.jpg" alt="" style="float: right;" width="361" height="220" /></p>
 
