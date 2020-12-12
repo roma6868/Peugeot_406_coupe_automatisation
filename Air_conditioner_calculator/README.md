@@ -37,7 +37,7 @@ TLE4207G : Dual Half Bridge Driver DC motor management
 HEF4013B : Dual D-type flip-flop  
 M95160 : 16-Kbit serial SPI  bus EEPROM  
 
-<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PCB_Calculateur_climatisation.jpg" alt="" style="float: right;" width="477" height="356" /></p>
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PCB_Calculateur_climatisation.jpg" alt="" style="float: right;" width="487" height="213" /></p>
 
 
 
