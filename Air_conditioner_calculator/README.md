@@ -143,7 +143,7 @@ Nombre de vitesse de ventilation : 7
 
 <strong>Commande du pulseur:</strong>  
 
-Le signal envoyer par le calculateur climatisation au module 8045 qui commande la vitesse du pulseur et de type PWM.
+Le signal envoyer par le calculateur climatisation au module 8045 qui commande la vitesse du pulseur et de type PWM.  
 Fréquence : 1,966kHz  
 Il varie de 0% a 100 %  
 De 0V au 12V  
