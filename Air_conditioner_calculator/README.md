@@ -20,8 +20,12 @@ Software version: 0802
  - <strong>8080</strong> : calculateur climatisation  
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Wiring_diagram.jpg" alt="" style="float: right;" width="477" height="356" /></p>
+------
+### Implantation des diffèrent capteur et actionneur sur le bloc de ventilation.  
 
-----
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/implantation_composant_dans_la_voiture.jpg" alt="" style="float: right;" width="468" height="311" /></p>
+
+------
 ### PCB Calculateur climatisation  
 
  - <strong>ELMOS 14010B</strong> : 12v => 5v convertisseur , entre analogique (Pas de datasheet trouve)  
@@ -159,5 +163,10 @@ De 0V au 12V
 
 
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/PWN_signal_pulseur_air.jpg" alt="" style="float: right;" width="1296" height="250" /></p>
+
+-----
+
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/diagrame_fonctionement_calculateur_clim.jpg" alt="" style="float: right;" width="460" height="299" /></p>
+
 
 
