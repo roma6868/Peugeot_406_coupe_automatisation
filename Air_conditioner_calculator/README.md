@@ -140,6 +140,6 @@ connecteur BSI 12V MR du BSI.
 Nombre de vitesse de ventilation : 7 
 
 
-<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/module_commande_pulseur_air.jpg" alt="" style="float: right;" width="359" height="325750" /></p>
+<p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/module_commande_pulseur_air.jpg" alt="" style="float: right;" width="359" height="257" /></p>
 
 
