@@ -1,7 +1,7 @@
 /*
  Name:		Programe_Principale_Arduino_14_06_2020.ino
  Created:	14/06/2020 17:56
- Author:	Roman
+ Author:	roma6868
  17/07/2020 : rajout de option phares automatique mcp_23017->activationSortieMCP(3, 1);
 */
 
