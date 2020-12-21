@@ -67,7 +67,7 @@ Il est utilise comme convertiseur DC/DC 12V => 5v , mais aussi comme ADC les dif
 <p><img src="https://github.com/roma6868/Peugeot_406_coupe_automatisation/blob/master/Air_conditioner_calculator/extra/Connection_electrique_ELMOS_14010B.jpg" alt="" style="float: right;" width="624" height="382" /></p>
 
 ----
-### STEND pour les essais
+### STAND pour les essais
 
 
 ----
