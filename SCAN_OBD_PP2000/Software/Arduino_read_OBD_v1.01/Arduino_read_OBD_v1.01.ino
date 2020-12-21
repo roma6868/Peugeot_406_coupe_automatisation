@@ -1,7 +1,7 @@
 /*
   Name:		Arduino_read_OBD_v1.ino
   Created:	14/05/2020 15:54:28
-  Author:	roman
+  Author:	roma6868
   Arduino UNO
   MCZ33290 Pin: RX 9 TX 8
   Button Connect Pin: 4
