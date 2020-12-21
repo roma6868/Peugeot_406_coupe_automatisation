@@ -1,7 +1,7 @@
 /*
   Name:		esp32_406.ino
   Created:	14/10/2019 15:44:59
-  Author:	ROMAN
+  Author:	roma6868
 */
 // modification pour la bonne envoye des donne sur le port serie fait pere avec
 //M:\arduino_esp32_406_programe_v1.0\v1.1_26_04_2020\communicaion_esp32_arduino_mega
