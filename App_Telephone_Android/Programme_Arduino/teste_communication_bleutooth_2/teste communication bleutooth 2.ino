@@ -1,7 +1,7 @@
 /*
  Name:		teste_communication_bleutooth_2.ino
  Created:	27/02/2020 16:03:39
- Author:	r.shabat
+ Author:	roma6868
 */
 
 #include "Arduino.h"
